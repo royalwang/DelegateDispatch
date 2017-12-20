@@ -14,9 +14,10 @@
 
 - (void)configDelegateDispatchWithHost:(id)host protocol:(Protocol *)protocol delegateSetter:(SEL)selector delegateObject:(id)delegate;
 
-- (void)addDelegateWithHost:(id)host protocol:(Protocol *)protocol client:(id)client;
+- (void)addDelegateClient:(id)client forHost:(id)host withProtocol:(Protocol *)protocol;
 
-- (void)setDelegateEnable:(BOOL)enable forClient:(id)client;
+- (void)removeDelegateClient:(id)client forHost:(id)host withProtocol:(Protocol *)protocol;
+- (void)removeAllDelegateClients:(id)client forHost:(id)host withProtocol:(Protocol *)protocol;
 
 @end
 
